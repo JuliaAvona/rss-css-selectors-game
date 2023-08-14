@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mexico Diner</title>
+    <link rel="stylesheet" href=".global.css">
+    <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/base16/atelier-estuary-light.min.css">
+    <link rel="icon" href="https://opengameart.org/sites/default/files/pixelart_skull.png">
+</head>
+
+<body>
+    <header>
+        <h1>CSS Selectors Game - Mexico Diner</h1>
+    </header>
+    <main>
+        <div class="game-field">
+            <section class="table-field">
+                <details>
+                    <summary>Rules</summary>
+                    <ul>
+                        <li>Write in the "CSS Editor" window the code how to refer to the moving element</li>
+                        <li>Press the ENTER key</li>
+                        <li>If the answer is correct, you move on to the next level</li>
+                        <li>Levels can be switched on the right</li>
+                        <li>If you don't know the solution - press the HELP button</li>
+                    </ul>
+                </details>
+            </section>
+            <section class="editor-field">
+                <h2>CSS Editor: </h2>
+                <div class="css-editor">
+                    <textarea spellcheck="false" placeholder="Type in a CSS selector"></textarea>
+                    <button class="enter">Enter</button>
+                    <button class="help">Help 🔮</button>
+                </div>
+                <div class="html-editor">
+                    <h2>HTML Viewer</h2>
+                    <pre><code class="language-xml" id="target"></code></pre>
+                </div>
+            </section>
+        </div>
+        <div class="aside">
+            <h2 class="active">Level 1</h2>
+            <h2>Level 2</h2>
+            <h2>Level 3</h2>
+            <h2>Level 4</h2>
+            <h2>Level 5</h2>
+            <h2>Level 6</h2>
+            <h2>Level 7</h2>
+            <h2>Level 8</h2>
+            <h2>Level 9</h2>
+            <h2>Level 10</h2>
+            <h2>Level 11</h2>
+            <h2>Level 12</h2>
+            <h2>Level 13</h2>
+            <h2>Level 14</h2>
+            <h2>Level 15</h2>
+            <button class="reset">Reset progress</button>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <ul class="footer-link">
+                <li class="footer-item">
+                    <a target="_blank" href="https://github.com/JuliaAvona" class="link-footer">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="my-github-link" class="icon">
+                    </a>
+                </li>
+                <li class="footer-item">2023</li>
+                <li class="footer-item">
+                    <a target="_blank" href="https://rs.school/js/" class="link-footer">
+                        <img src="data:image/png;base64,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"
+                            alt="rsschool-link" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        // hljs.highlightAll();
+    </script>
+</body>
+
+</html>

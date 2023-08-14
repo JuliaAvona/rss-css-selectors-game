@@ -1,0 +1,714 @@
+body {
+    color: #3c4e57;
+    background: #ffffff;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #fdfcff;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23988aaf' fill-opacity='0.33' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+header {
+    max-width: 1220px;
+    margin: auto;
+
+    h1 {
+        margin-left: 20px;
+        margin-top: 50px;
+        text-wrap: wrap;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1220px;
+    margin: auto;
+
+    .game-field {
+        padding: 10px;
+        padding-bottom: 0;
+
+        .table-field {
+            padding: 20px 0 20px 0;
+
+            details {
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 1.5rem;
+
+                summary {
+
+                    li {
+                        padding: 10px;
+                        font-weight: 500;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .table {
+                max-width: 1000px;
+                min-height: 620px;
+                background-image: url('https://s0.rbk.ru/v6_top_pics/media/img/5/41/755937867472415.jpg');
+                background-size: cover;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 15px;
+                margin-top: 20px;
+                border-radius: 10px;
+
+
+                pan {
+                    width: 130px;
+                    height: 130px;
+                    background-image: url('https://i.pinimg.com/originals/ea/ee/06/eaee065e419fe0cc4d7ee1dbd15ba759.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    margin-top: 62px;
+                    cursor: pointer;
+                    display: block;
+
+                    &:hover {
+                        transform: translateY(5px);
+                    }
+                }
+
+                cacao {
+                    width: 130px;
+                    height: 130px;
+                    background-image: url('https://sites.google.com/a/bicholate.com/stock/_/rsrc/1325028619351/miscelanea/jarrito_simple_flat.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    display: block;
+
+                    &:hover {
+                        transform: translateY(5px);
+                    }
+                }
+
+                plate {
+                    width: 200px;
+                    height: 120px;
+                    background-size: contain;
+                    background-color: #ff9800eb;
+                    background-repeat: no-repeat;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    border: 10px dotted black;
+                    transform: scaleX(1.2);
+
+                    pan {
+                        margin-top: 10px;
+                    }
+
+                    cacao {
+                        margin-top: -25px;
+                    }
+
+                    scull {
+                        margin-top: -25px;
+                    }
+                }
+
+                scull {
+                    width: 130px;
+                    height: 130px;
+                    background-image: url('https://cdn.pixabay.com/photo/2018/05/02/10/31/day-of-the-dead-3368234_1280.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    display: block;
+
+                    &:hover {
+                        transform: translateY(5px);
+                    }
+                }
+            }
+        }
+
+        .editor-field {
+            max-width: 1000px;
+            height: auto;
+            background-color: rgb(212, 212, 212);
+            padding: 15px;
+            border-radius: 10px;
+
+            .css-editor {
+                padding: 10px;
+                padding-left: 0;
+                display: flex;
+                justify-content: space-between;
+
+                textarea {
+                    border: none;
+                    width: 792px;
+                    height: 50px;
+                    font-size: 15px;
+                    border-radius: 5px;
+                    font-size: 2rem;
+                    padding-left: 10px;
+                    color: black;
+                }
+
+                button {
+                    width: 90px;
+                    height: 53px;
+                    color: white;
+                    background-color: #001c49;
+                    border-radius: 8px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: all 0.5 ease-in-out;
+                    margin-left: 10px;
+
+                    &:active {
+                        border: 3px solid rgb(173, 172, 172);
+                    }
+                }
+
+                .help {
+                    background-color: #4f79b2;
+                }
+            }
+
+            .html-editor {
+                padding: 10px;
+                padding-left: 0;
+
+                .markup {
+                    width: 550px;
+                    height: 300px;
+                    font-size: 15px;
+                    resize: none;
+                    border: none;
+                }
+
+                pre {
+                    .language-xml {
+                        cursor: pointer;
+                        // font-size: 1.5rem;
+                        // background-color: rgb(250, 251, 229);
+                        // border-radius: 10px;
+                        // padding: 10px;
+
+                        pre {
+                            font-size: 1.5rem;
+                            background-color: rgb(250, 251, 229);
+                            border-radius: 10px;
+                            padding: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .aside {
+        width: auto;
+        background-color: rgb(210, 210, 210);
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 79px;
+
+        h2 {
+            cursor: pointer;
+            transition: all 0.2 ease;
+            text-wrap: nowrap;
+            margin: 0;
+            margin-top: 25px;
+
+            &::before {
+                content: '⚫️  ';
+                padding-right: 10px;
+            }
+
+            &.active {
+                color: #4f79b2;
+
+                &::before {
+                    content: '🟡  ';
+                    padding-right: 10px;
+                }
+            }
+
+            &:hover {
+                color: rgb(0, 117, 149);
+            }
+
+            &.done {
+                text-decoration: line-through;
+                color: green;
+
+                &::after {
+                    content: '✅';
+                    padding-left: 20px;
+                }
+            }
+
+            &.help {
+                text-decoration: none;
+                color: green;
+
+
+                &::after {
+                    content: 'HELP';
+                    color: darkorchid;
+                    font-size: 0.7rem;
+                    padding-left: 10px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .reset {
+            width: 150px;
+            height: 50px;
+            color: wheat;
+            background-color: #001c49;
+            border-radius: 8px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 20px;
+
+            &:hover {
+                color: #001c49;
+                ;
+                background-color: wheat;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+
+    .container {
+        max-width: 1220px;
+        margin: auto;
+
+        .footer-link {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            padding-bottom: 0;
+            margin-top: 60px;
+
+            .footer-item {
+                list-style: none;
+                padding-left: 3rem;
+                padding-right: 3rem;
+                color: #232d32;
+                font-size: 5rem;
+
+                .link-footer {
+                    text-decoration: none;
+                    color: #ffffff;
+
+
+                    .icon {
+                        width: 100px;
+                        height: auto;
+                        border-radius: 10px;
+                        transition: all 0.5 ease;
+                    }
+
+                    .icon:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Animations */
+.rotate {
+    animation: wobble 3s ease infinite;
+}
+
+.hithere {
+    animation: hithere 3s ease infinite;
+}
+
+.shake {
+    animation-name: shake;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 5;
+}
+
+@keyframes wobble {
+    0% {
+        transform: translateX(0%);
+    }
+
+    15% {
+        transform: translateX(-25%) rotate(-5deg);
+    }
+
+    30% {
+        transform: translateX(20%) rotate(3deg);
+    }
+
+    45% {
+        transform: translateX(-15%) rotate(-3deg);
+    }
+
+    60% {
+        transform: translateX(10%) rotate(2deg);
+    }
+
+    75% {
+        transform: translateX(-5%) rotate(-1deg);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes hithere {
+    30% {
+        transform: scale(1.2);
+    }
+
+    40%,
+    60% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+
+    50% {
+        transform: rotate(20deg) scale(1.2);
+    }
+
+    70% {
+        transform: rotate(0deg) scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-7px);
+    }
+
+    50% {
+        transform: translateX(7px);
+    }
+
+    75% {
+        transform: translateX(-7px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-100px);
+    }
+
+    60% {
+        transform: translateY(-50px);
+    }
+}
+
+.tooltip {
+    position: absolute;
+    background: #fffdcede;
+    color: rgb(5, 50, 0);
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    z-index: 1;
+    white-space: nowrap;
+    display: block;
+    margin: 5px;
+}
+
+.hljs-tag {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1400px) {
+    main {
+        flex-direction: column;
+        margin-right: 20px;
+
+        .aside {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3px;
+            max-width: 1000px;
+            height: auto;
+            padding: 15px;
+            margin-left: 10px;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 1120px) {
+    main {
+        margin-left: 10px;
+
+        .game-field {
+            .editor-field {
+                .css-editor {
+                    flex-direction: column;
+
+                    textarea {
+                        width: auto;
+                        font-size: 2rem;
+                        height: 40px;
+                        display: flex;
+                        justify-content: flex-start;
+                        padding: 7px;
+                    }
+
+                    .enter,
+                    .help {
+                        display: block;
+                        width: auto;
+                        height: 50px;
+                        margin: 15px 0 0 0;
+                    }
+                }
+            }
+        }
+
+        .aside {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3px;
+            margin-left: 10px;
+            margin-right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 25px;
+
+            .reset {
+                display: block;
+                width: auto;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1030px) and (min-width: 1015px) {
+
+    header h1 {
+        margin-top: 20px;
+    }
+
+    main {
+        .game-field {
+            display: flex;
+            justify-content: space-between;
+
+            .table-field {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column-reverse;
+                padding-top: 0;
+                margin-top: 0;
+
+                .table {
+                    margin-top: 0;
+                    padding-top: 0;
+                    width: 387px;
+                    min-height: 280px;
+                    padding: 25px;
+
+                    plate {
+                        width: 100px;
+                        height: 70px;
+
+                        scull,
+                        pan,
+                        cacao {
+                            margin: 0;
+                        }
+                    }
+
+                    scull,
+                    pan,
+                    cacao {
+                        width: 100px;
+                        height: 70px;
+                        margin-top: 0;
+                    }
+                }
+
+                details {
+                    font-size: 1rem;
+                }
+            }
+
+            .editor-field {
+                padding: 10px;
+
+                .css-editor {
+                    flex-direction: row;
+                    max-width: 480px;
+
+                    h2,
+                    textarea {
+                        font-size: 1rem;
+                    }
+
+                    textarea {
+                        width: 400px;
+                        height: 30px;
+                    }
+
+                    .help,
+                    .enter {
+                        width: 96px;
+                        height: 44px;
+                        margin: 0;
+                        margin-left: 5px;
+                    }
+                }
+
+                .html-editor {
+                    padding: 0;
+
+                    pre .language-xml pre {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .aside {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            padding-bottom: 15px;
+
+            h2 {
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+    footer {
+        position: fixed;
+        top: -78px;
+        right: -179px;
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width: 700px) {
+
+    main {
+
+        .game-field .editor-field .css-editor textar {
+            font-size: 1rem;
+        }
+
+        .game-field {
+            .table-field {
+                .table {
+
+                    pan,
+                    cacao,
+                    plate,
+                    scull {
+                        width: 100px;
+                        height: 100px;
+                        margin-top: 0;
+                    }
+                }
+            }
+
+        }
+
+        .editor-field {
+            .html-editor {
+                pre {
+                    .language-xml {
+                        pre {
+                            text-wrap: wrap;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .game-field .table-field .table plate scull,
+        .game-field .table-field .table plate cacao {
+            margin-top: 0;
+        }
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    footer {
+        .container {
+            .footer-link {
+                .footer-item {
+                    font-size: 2rem;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+
+                    .link-footer {
+                        .icon {
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
